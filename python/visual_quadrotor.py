@@ -11,9 +11,9 @@ class Simulation:
 
     def initialize(self):
         ### TIME RELATED DATA
-        self.T = 100.000              # Total simulation time
+        self.T = 25.000              # Total simulation time
         self.dt = 0.001              # Simulation step size
-        self.framerate = 33
+        self.framerate = 66 
         self.t = 0.0                 # Current time
         self.time_stamps = []        # Time stamps for plot
 
@@ -107,12 +107,12 @@ class Simulation:
             if counter == self.framerate:
             #if self.t > self.T - 2*self.dt:
                 counter = 0
-                #self.addFrame()
+                self.addFrame()
 
     def animation(self):
         print("Creating animation")
         animation = self.camera.animate()
-        animation.save('complex.mp4', fps=30, codec='libx264')
+        animation.save('complex.mp4', fps=15, codec='libx264')
         #plt.show()
         print("Done")
     
@@ -160,8 +160,8 @@ class Simulation:
         self.animation_axis.set_ylabel("y (m)")
         self.animation_axis.set_zlabel("z (m)")
         self.animation_axis.set_xlim([-2.0, 10.0])
-        self.animation_axis.set_ylim([-5.0, 5.0])
-        self.animation_axis.set_zlim([-1.0, 5.0])
+        self.animation_axis.set_ylim([-7.0, 7.0])
+        self.animation_axis.set_zlim([-2.0, 5.0])
 
         self.camera.snap()
 
@@ -189,7 +189,7 @@ class Simulation:
         omega_x = 0.5
 
         ry = 10.0
-        omega_y = 1.0
+        omega_y = 0.5
 
         rz = 2.0
         omega_z = 0.5
@@ -601,8 +601,8 @@ def main():
     simulation = Simulation()
     simulation.initialize()
     simulation.run()
-    #simulation.animation()
-    simulation.plot()
+    simulation.animation()
+    #simulation.plot()
 
 if __name__ == '__main__':
     main()

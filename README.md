@@ -27,3 +27,5 @@ pip3 install -r requirements.text
 
 + `visual_gates.py` is a more advanced example not reported on the article that
 	shows a quadrotor racing trough a simple a track with gates
+
+![Alt Text](Misc/quadrotor.gif)
