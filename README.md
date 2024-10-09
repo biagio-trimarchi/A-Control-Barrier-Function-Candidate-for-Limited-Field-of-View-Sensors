@@ -3,7 +3,7 @@ A-Control-Barrier-Function-Candidate-for-Limited-Field-of-View-Sensors
 
 This repository contains the simulated scenarios used to showcase the 
 control approach presented in
-[A Control Barrier Function Candidate for Limited Field of View Sensors]().
+[A Control Barrier Function Candidate for Limited Field of View Sensors](https://arxiv.org/abs/2410.01277).
 
 # Running the Simulations
 
